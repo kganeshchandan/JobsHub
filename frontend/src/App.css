@@ -1,0 +1,69 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loginform {
+  margin: 100px;
+  padding: 10vw;
+  display: block;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 0px 0px 2px 0px rgb(85, 84, 84);
+  /* border-radius: 10px; */
+  border-color: rgba(233, 220, 220, 0);
+}
+.loginform2 {
+  margin: 20px;
+
+  display: block;
+  /* border: 1px solid; */
+  padding: 10px;
+  box-shadow: 0px 0px 20px 10px rgba(206, 199, 199, 0.89);
+  border-radius: 10px;
+  border-color: rgba(233, 220, 220, 0);
+}
+.loginform3 {
+  margin: 20px 0px 20px 0px;
+
+  /* display: block; */
+  /* border: 1px solid; */
+  /* padding: 10px; */
+  box-shadow: 0px 0px 20px 5px rgba(206, 199, 199, 0.89);
+  /* border-radius: 10px; */
+  /* border-color: rgba(233, 220, 220, 0); */
+}
+.box {
+  /* background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 0px;
+  margin: 50px; */
+  padding: 10vw;
+}
+.modal {
+  height: 50vh;
+}
