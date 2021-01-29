@@ -2,11 +2,11 @@
 
 # to inititialise the webapp
 
-#step1
+# step1
 $ cd backend
 $ npm start
 
-#step2
+# step2
 $ cd frontend
 $ npm start
 
