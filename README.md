@@ -11,6 +11,8 @@ $ npm start
 
 # step2
 $ cd frontend
+
 $ npm install
+
 $ npm start
 
