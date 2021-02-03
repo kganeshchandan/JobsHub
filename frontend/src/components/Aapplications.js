@@ -44,6 +44,7 @@ const Aapplications = () => {
     axios
       .get(`http://localhost:5000/application/findapp/findapp/${userID}`)
       .then((response) => {
+        console.log(response.data);
         setApplist(
           response.data.map((s) => ({
             id: s._id,

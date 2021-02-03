@@ -89,26 +89,29 @@ router.post("/delete/:ID", async (req, res) => {
   }
 });
 
-router.post("/rab/acr/r/:ID/:id", async (req, res) => {
-  const toedit = await application.findOne({
-    jobID: req.params.ID,
-    applicantID: req.params.id,
-  });
-  toedit.Abool = true;
-  console.log("bb", toedit);
-
-  const jobedit = await Jobs.findOne({ _id: req.params.ID });
-  // console.log("bruh", jobedit);
-  (jobedit.RateSum = req.body.rating + jobedit.RateSum),
-    (jobedit.Ratings = jobedit.Ratings + 1);
-  // console.log(jobedit);
-  // res.json(jobedit);
+router.post("/rab/acr/r/x/:ID/:id", async (req, res) => {
   try {
-    const savedtoedit = await toedit.save();
+    const toedit = await application.findOne({
+      jobID: req.params.ID,
+      applicantID: req.params.id,
+    });
+    toedit.Abool = true;
+    console.log("bb", toedit);
+
+    const jobedit = await Jobs.findOne({ _id: req.params.ID });
+    console.log("heelo", req.body);
+    // console.log("bruh", jobedit);
+    jobedit.RateSum = req.body.rating + jobedit.RateSum;
+    jobedit.Ratings = jobedit.Ratings + 1;
+    // console.log(jobedit);
+    // res.json(jobedit);
+
     const savedjobedit = await jobedit.save();
+
+    const savedtoedit = await toedit.save();
     res.json(savedjobedit);
   } catch (err) {
-    console.log(err);
+    res.json(err);
   }
 });
 

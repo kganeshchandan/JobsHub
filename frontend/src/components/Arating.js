@@ -31,7 +31,7 @@ const Arating = (props) => {
 
   const toggle = () => setModal(!modal);
   const [ratit, setratit] = useState(false);
-  const [value, setValue] = useState(2);
+  const [value, setValue] = useState(0);
   const { register, handleSubmit, errors } = useForm();
 
   function compare() {
@@ -41,14 +41,20 @@ const Arating = (props) => {
       return false;
     }
   }
-  async function onsubmit(data) {
-    await axios.post(
-      `http://localhost:5000/joblist/rab/acr/r/${jobID}/${applicantID}`,
-      {
-        rating: { value },
-      }
-    );
-    console.log("raaating is", data);
+  function onsubmit(data) {
+    axios
+      .post(
+        `http://localhost:5000/joblist/rab/acr/r/x/${jobID}/${applicantID}`,
+        {
+          rating: value,
+        }
+      )
+      .then((response) => console.log(response.status))
+      .catch((error) => console.log(error.response.data));
+
+    console.log("raaating is", value);
+
+    // console.log(re.status);
   }
   return (
     <div>
@@ -61,7 +67,7 @@ const Arating = (props) => {
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Modal title</ModalHeader>
         <ModalBody>
-          <Form onSubit={handleSubmit(onsubmit)}>
+          <Form>
             <Rating
               name="simple-controlled"
               value={value}
@@ -70,7 +76,9 @@ const Arating = (props) => {
               }}
             />
             {/* <Input name="rating" value={value}></Input */}
-            <Button>submit</Button>
+            <Button type="button" onClick={onsubmit}>
+              submit
+            </Button>
           </Form>
         </ModalBody>
       </Modal>

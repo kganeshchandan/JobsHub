@@ -45,7 +45,7 @@ const Rrating = (props) => {
     await axios.post(
       `http://localhost:5000/application/abcde/xyz/omg/fku/${applicationID}/${applicantID}`,
       {
-        rating: { value },
+        rating: value,
       }
     );
     console.log("raaating is", data);
@@ -61,7 +61,7 @@ const Rrating = (props) => {
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Modal title</ModalHeader>
         <ModalBody>
-          <Form onSubit={handleSubmit(onsubmit)}>
+          <Form>
             <Rating
               name="simple-controlled"
               value={value}
@@ -70,7 +70,9 @@ const Rrating = (props) => {
               }}
             />
             {/* <Input name="rating" value={value}></Input */}
-            <Button>submit</Button>
+            <Button type="button" onClick={onsubmit}>
+              submit
+            </Button>
           </Form>
         </ModalBody>
       </Modal>
