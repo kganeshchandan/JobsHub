@@ -66,11 +66,9 @@ const LoginForm = () => {
   return (
     <Container fluid>
       <Row>
-        {/* <Col xs="6">
-          <div className="App">
-            <img src={logo} className="App-logo" alt="logo" />
-          </div>
-        </Col> */}
+        <Col style={{ backgroundColor: "white" }}>
+          <img src={logo} className="App-logo" alt="logo" />
+        </Col>
         <Col>
           <div className="loginform">
             <h3 style={{ textAlign: "center" }}> Enter Credentials </h3>
