@@ -18,6 +18,7 @@ import {
   CardHeader,
   CardFooter,
   Table,
+  Badge,
 } from "reactstrap";
 import "../App.css";
 import axios from "axios";
@@ -101,13 +102,13 @@ const Rapplications = () => {
               <CardHeader>
                 <h3> {s.aname}</h3>
               </CardHeader>
+
               <CardBody>
-                applicantID: {s.applicantID}
                 <br />
                 {/* status: {s.status},<br /> */}
-                skills: {s.skills},<br />
+                {/* skills: {s.skills},<br /> */}
                 DOA: {s.DOA}, <br />
-                aeducation: {s.aeducation},<br />
+                {/* aeducation: {s.aeducation},<br /> */}
                 SOP: {s.SOP},<br />
                 rating: {s.rating}
                 {!s.jbool && (
@@ -118,6 +119,15 @@ const Rapplications = () => {
                   />
                 )}
               </CardBody>
+              <Container fluid>
+                {s.skills.map((a, i) => (
+                  <Badge style={{ margin: "5px" }} color="light">
+                    <h6> {a} </h6>
+                  </Badge>
+                ))}
+                <br />
+              </Container>
+              <CardBody></CardBody>
             </Card>
           )}
         </Col>
