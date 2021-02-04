@@ -118,9 +118,6 @@ const Rviewapps = () => {
   return (
     <Container fluid>
       <RecruiterUI />
-      {userID}
-      <br />
-      {jobID}
       {List.map((s, i) => (
         <Col>
           {isreject(s.status) && (
@@ -129,18 +126,21 @@ const Rviewapps = () => {
                 <h3> {s.aname}</h3>
               </CardHeader>
               <CardBody>
-                applicantID: {s.applicantID}
-                <br />
-                status: {s.status},<br />
+                {/* applicantID: {s.applicantID} */}
+                DOA: {s.DOA} <br />
+                <Badge style={{ margin: "5px" }} color="info">
+                  <h6> {s.status} </h6>
+                </Badge>
+                <br></br>
                 {s.skills.map((a, i) => (
                   <Badge style={{ margin: "5px" }} color="light">
                     <h6> {a} </h6>
                   </Badge>
                 ))}
+                <hr />
                 {/* Skills:{s.skills} */}
-                DOA: {s.DOA}, <br />
-                aeducation: {s.aeducation},<br />
-                SOP: {s.SOP},<br />
+                SOP: {s.SOP}
+                <br />
                 rating: {s.rating}
               </CardBody>
               <CardFooter className="d=flex justify-content-end">
