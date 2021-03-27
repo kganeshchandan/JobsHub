@@ -1,18 +1,19 @@
 # MernHub
+> This is a MERN stack webapp with REST principles
 
 ## To inititialise the webapp
 
 ### step1
-`cd backend` 
+$`cd backend` 
 
-$ `npm install`
+$`npm install`
 
-$ `npm start`
+$`npm start`
 
 ### step2
-$ `cd frontend`
+$`cd frontend`
 
-$ `npm install`
+$`npm install`
 
-$ `npm start`
+$`npm start`
 
