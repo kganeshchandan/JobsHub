@@ -1,18 +1,18 @@
 # MernHub
 
-# to inititialise the webapp
+## To inititialise the webapp
 
-# step1
-$ cd backend 
+### step1
+`cd backend` 
 
-$ npm install
+$ `npm install`
 
-$ npm start
+$ `npm start`
 
-# step2
-$ cd frontend
+### step2
+$ `cd frontend`
 
-$ npm install
+$ `npm install`
 
-$ npm start
+$ `npm start`
 
