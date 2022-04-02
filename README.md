@@ -1,4 +1,4 @@
-# MernHub
+# JobsHub
 > This is a MERN stack based webapp with REST principles
 
 ## To inititialise the webapp
