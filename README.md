@@ -3,17 +3,13 @@
 
 ## To inititialise the webapp
 
-### step1
-$`cd backend` 
+### Start Backend
+`cd backend` 
+`npm install`
+`npm start`
 
-$`npm install`
-
-$`npm start`
-
-### step2
-$`cd frontend`
-
-$`npm install`
-
-$`npm start`
+### Start Frontend
+`cd frontend`
+`npm install`
+`npm start`
 
